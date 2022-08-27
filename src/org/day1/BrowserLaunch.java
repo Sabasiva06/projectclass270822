@@ -39,6 +39,12 @@ public class BrowserLaunch {
 
 		String string = js.executeScript("return document.title").toString();
 		System.out.println(string);
-	}
 
+		WebElement txtPass = driver.findElement(By.id("pass"));
+		txtPass.sendKeys("welcome java");
+
+		WebElement btnLogin = driver.findElement(By.name("login"));
+		btnLogin.click();
+
+	}
 }
